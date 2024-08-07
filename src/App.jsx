@@ -50,7 +50,7 @@ function App() {
         <div className="search">
           <form onSubmit={submit}>
             <input type="text" name="" id="input" value={input} onChange={(e) => setInput(e.target.value)} placeholder='...Search Dishes' />
-            <button><FaSearch size={40} className='search-icon' /></button>
+            <button onClick={submit}><FaSearch size={37.5} className='search-icon' /></button>
           </form>
         </div>
       </header>
@@ -63,7 +63,7 @@ function App() {
           loading ?
             (
               <div className='loader'>
-                <FiLoader size={50} className='loading-icon' />
+                <FiLoader size={70} className='loading-icon' />
               </div>
             )
             :
@@ -81,8 +81,8 @@ function App() {
                         <img src={recipes.strMealThumb} alt={recipes.strMeal} />
                       </div>
                       <div className="recipe-content shadow-lg">
-                        <h3>{recipes.strMeal}</h3>
-                        <p className='dish'>Dish : {recipes.strArea}</p>
+                        <h3 className='dish-title'>{recipes.strMeal}</h3>
+                        <p className='dish space'>Dish : {recipes.strArea}</p>
                         <a href={recipes.strYoutube} className="link space" target="_blank">Watch On Youtube</a>
                         <a href={recipes.strSource} className="link space" target="_blank">Recipe Source</a>
                       </div>
@@ -92,7 +92,7 @@ function App() {
                 :
                 (
                   <div className='error'>
-                  <h2>no result for the search</h2>
+                    <h2>no result for the search</h2>
                   </div>
                 )
         }

@@ -6,8 +6,7 @@
 
 body {
   /* background-color: rgb(27, 26, 26); */
-  background-color: rgb(240, 234, 234);
-
+  background-color: rgb(247, 244, 244);
 }
 
 header {
@@ -16,7 +15,7 @@ header {
   flex-direction: column;
   background-image: url('assets/bgimg.avif');
   width: 100vw;
-  height: 40vh;
+  height: 35vh;
   color: white;
   text-align: center;
   background-repeat: no-repeat;
@@ -27,8 +26,8 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  margin: 70px 130px;
-  row-gap: 45px;
+  margin: 70px 131px;
+  row-gap: 37px;
 }
 
 .card {
@@ -36,19 +35,6 @@ header {
   overflow: hidden;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
-}
-
-.search-heading {
-  color: black;
-  text-align: center;
-  margin: 20px;
-}
-
-.recipe-content {
-  height: 120px;
-  padding: 5px 8px;
-  margin-top: -7px;
-  background-color: white;
 }
 
 .card img {
@@ -61,12 +47,23 @@ header {
   width: 100%;
 }
 
-.gap {
-  margin-bottom: 10px;
+.recipe-content {
+  height: 151px;
+  padding: 5px 8px 155px 8px;
+  margin-top: -7px;
+  background-color: white;
 }
 
-input {
-  width: 20vw;
+.search-heading {
+  color: black;
+  text-align: center;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search {
@@ -75,7 +72,8 @@ input {
 }
 
 .search input {
-  padding: 9px 8px;
+  width: 270px;
+  padding: 8px 7px;
   font-weight: bold;
   outline: none;
   border: none;
@@ -90,10 +88,13 @@ input:hover {
   border: none;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+button {
+  outline: none;
+  border: none;
+  margin-left: 1px;
+  background: none;
+  height: auto;
+  margin-top: 3px;
 }
 
 .search .search-icon {
@@ -102,15 +103,7 @@ form {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: white;
-}
-
-button {
-  outline: none;
-  border: none;
-  margin-left: 1px;
-  background: none;
-  height: auto;
-  margin-top: 3px;
+  margin-left: -1px;
 }
 
 .link {
@@ -121,9 +114,7 @@ button {
 }
 
 .loader {
-  position: fixed;
-  left: 50;
-  right: 50;
+  position: absolute;
   color: black;
   margin: 0 auto;
   text-align: center;
@@ -131,6 +122,10 @@ button {
 
 .loading-icon {
   animation: loading 05s linear infinite;
+  position: relative;
+  left: 50;
+  right: 50;
+  top: 150px;
 }
 
 .dish {
@@ -138,10 +133,21 @@ button {
 }
 
 .error {
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.space {
+  margin: 1px 0;
+}
+
+.dish-title {
+  margin-bottom: 5px;
+}
+
+.gap {
+  margin-bottom: 10px;
 }
 
 body::-webkit-scrollbar {
