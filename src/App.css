@@ -9,108 +9,10 @@ body {
   background-color: rgb(247, 244, 244);
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-image: url('assets/bgimg.avif');
-  width: 100vw;
-  height: 35vh;
-  color: white;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-  margin: 70px 131px;
-  row-gap: 37px;
-}
-
-.card {
-  width: 18vw;
-  overflow: hidden;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 30px;
-}
-
-.card img {
-  width: 100%;
-  height: 140px;
-  background-size: contain;
-}
-
-.card-img {
-  width: 100%;
-}
-
-.recipe-content {
-  height: 151px;
-  padding: 5px 8px 155px 8px;
-  margin-top: -7px;
-  background-color: white;
-}
-
 .search-heading {
   color: black;
   text-align: center;
   margin: 20px;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search {
-  position: relative;
-  top: 20px;
-}
-
-.search input {
-  width: 270px;
-  padding: 8px 7px;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-}
-
-input:hover {
-  outline: none;
-  border: none;
-}
-
-button {
-  outline: none;
-  border: none;
-  margin-left: 1px;
-  background: none;
-  height: auto;
-  margin-top: 3px;
-}
-
-.search .search-icon {
-  background-color: red;
-  padding: 0 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: white;
-  margin-left: -1px;
-}
-
-.link {
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-  display: inline-block;
 }
 
 .loader {
@@ -121,33 +23,11 @@ button {
 }
 
 .loading-icon {
-  animation: loading 05s linear infinite;
+  animation: loading 6s linear infinite;
   position: relative;
   left: 50;
   right: 50;
   top: 150px;
-}
-
-.dish {
-  font-weight: 500;
-}
-
-.error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.space {
-  margin: 1px 0;
-}
-
-.dish-title {
-  margin-bottom: 5px;
-}
-
-.gap {
-  margin-bottom: 10px;
 }
 
 body::-webkit-scrollbar {
