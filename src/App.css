@@ -17,7 +17,8 @@ body {
 
 .loader {
   position: absolute;
-  color: black;
+  /* color: black; */
+  color: white;
   margin: 0 auto;
   text-align: center;
 }
