@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import './Card.css'
 import { FiLoader } from "react-icons/fi";
 
-
 const Card = ({ query }) => {
 
   const [recipe, setRecipe] = useState([]);
