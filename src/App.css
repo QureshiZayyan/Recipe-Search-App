@@ -5,8 +5,7 @@
 }
 
 body {
-  /* background-color: rgb(20, 18, 18); */
-  background-color: rgb(240, 237, 237);
+  background-color: rgb(15, 14, 14);
 }
 
 .search-heading {
@@ -29,6 +28,10 @@ body {
   left: 50;
   right: 50;
   top: 150px;
+}
+
+.results {
+  text-align: center;
 }
 
 body::-webkit-scrollbar {
