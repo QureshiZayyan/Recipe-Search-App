@@ -29,10 +29,7 @@ const Card = ({ query }) => {
   }, [query]);
 
   const formatTags = (tags) => {
-    return tags
-      .split(',')
-      .slice(0, 2)
-      .join(', ');
+    return tags.split(',').slice(0, 2).join(', ');
   };
 
   return (

@@ -4,7 +4,7 @@ header {
   flex-direction: column;
   background-image: url('/src/assets/bgimg.avif');
   width: 100vw;
-  height: 35vh;
+  height: 45vh;
   color: white;
   text-align: center;
   background-repeat: no-repeat;
@@ -46,6 +46,7 @@ button {
   background: none;
   height: auto;
   margin-top: 3px;
+  cursor: pointer;
 }
 
 .search .search-icon {
