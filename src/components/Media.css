@@ -1,12 +1,11 @@
 @media (min-width:768px) and (max-width:1024px) {
   .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 70px 18vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 70px 10vw;
   }
 
   .card {
-    width: 26.5vw;
-
+    width: 24vw;
   }
 }
 
@@ -19,11 +18,11 @@
   }
 
   .card {
-    width: 270px;
+    width: 250px;
   }
 
   .recipe-content {
-    height: 120px;
+    height: 150px;
   }
 
   .search {

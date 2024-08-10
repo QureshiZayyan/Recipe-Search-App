@@ -12,7 +12,7 @@ const Card = ({ query }) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
         if (!response.ok) throw new Error('Server problem');
         const data = await response.json();
         setRecipe(data.meals);
@@ -36,7 +36,7 @@ const Card = ({ query }) => {
     <>
       {loading ? (
         <div className='loader'>
-          <FiLoader size={70} className='loading-icon' />
+          <FiLoader size={50} className='loading-icon' />
         </div>
       ) : errors ? (
         <p>{errors}</p>
@@ -52,10 +52,13 @@ const Card = ({ query }) => {
                   <h3 className='dish-title'>{recipes.strMeal}</h3>
                   <p className='dish-area space'>Dish : {recipes.strArea}</p>
                   {recipes.strTags ? <p className=' space'>Type : {formatTags(recipes.strTags)}</p> : null}
-                  <a href={recipes.strYoutube} className="link space" target="_blank" rel="noopener noreferrer">Watch Recipe On Youtube</a>
+                  <a href='' className="link space" target="_blank" rel="noopener noreferrer">Watch Recipe On Youtube</a>
+                  {/* <div className="video">
+                      <iframe src={recipes.strYoutube}</iframe>
+                  </div> */}
                   <a href={recipes.strSource} className="link space" target="_blank" rel="noopener noreferrer">View Recipe Source</a>
-                </div>
-              </div>
+                </div >
+              </div >
             ))
           ) : (
             <div className='error'>
@@ -63,7 +66,7 @@ const Card = ({ query }) => {
             </div>
           )}
     </>
-  );
+  )
 };
 
 export default Card;
