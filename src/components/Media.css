@@ -13,7 +13,6 @@
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
     place-content: center;
-    column-gap: 15px;
     margin: 50px 10px;
   }
 
@@ -22,7 +21,7 @@
   }
 
   .recipe-content {
-    height: 150px;
+    height: 210px;
   }
 
   .search {
