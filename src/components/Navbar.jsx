@@ -10,7 +10,7 @@ const Navbar = ({ setQuery }) => {
     if (!input) return;
     setQuery(input);
     setInput('');
-    setRecipe([]);
+    // setRecipe([]);
     // setHeading(input);
   }
   return (

@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  margin: 70px 11vw;
+  margin: 70px 10vw;
   row-gap: 30px;
 }
 
 .card {
-  width: 18vw;
+  width: 18.5vw;
   overflow: hidden;
   border-radius: 13px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -26,10 +26,10 @@
 }
 
 .recipe-content {
-  height: 175px;
+  height: 195px;
   padding: 5px 4px 180px 8px;
-  margin-top: -7px;
-  background-color: white;
+  margin-top: -6.5px;
+  background-color: rgb(248, 248, 248);
 }
 
 .card a:hover {
