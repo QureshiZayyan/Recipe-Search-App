@@ -11,14 +11,14 @@
 
 @media (max-width:767px) {
   .cards-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     place-content: center;
     column-gap: 15px;
-    margin: 50px 0;
+    margin: 50px 10px;
   }
 
   .card {
-    width: 250px;
+    width: 45vw;
   }
 
   .recipe-content {
