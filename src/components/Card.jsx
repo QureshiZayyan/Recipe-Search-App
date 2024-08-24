@@ -52,10 +52,7 @@ const Card = ({ query }) => {
                   <h3 className='dish-title'>{recipes.strMeal}</h3>
                   <p className='dish-area space'>Dish : {recipes.strArea}</p>
                   {recipes.strTags ? <p className=' space'>Type : {formatTags(recipes.strTags)}</p> : null}
-                  <a href='' className="link space" target="_blank" rel="noopener noreferrer">Watch Recipe On Youtube</a>
-                  {/* <div className="video">
-                      <iframe src={recipes.strYoutube}</iframe>
-                  </div> */}
+                  <a href={recipes.strYoutube} className="link space" target="_blank" rel="noopener noreferrer">Watch Recipe On <span>Youtube</span></a>
                   <a href={recipes.strSource} className="link space" target="_blank" rel="noopener noreferrer">View Recipe Source</a>
                 </div >
               </div >

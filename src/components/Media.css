@@ -1,11 +1,15 @@
 @media (min-width:768px) and (max-width:1024px) {
   .cards-container {
     grid-template-columns: repeat(3, 1fr);
-    margin: 70px 10vw;
+    margin: 70px 11vw;
   }
 
   .card {
     width: 24vw;
+  }
+
+  .search{
+    top: 8px;
   }
 }
 
@@ -21,7 +25,8 @@
   }
 
   .recipe-content {
-    height: 210px;
+    height: 220px;
+    /* margin-top: -20px; */
   }
 
   .search {
