@@ -36,7 +36,7 @@ const Card = ({ query }) => {
     <>
       {loading ? (
         <div className='loader'>
-          <FiLoader size={50} className='loading-icon' />
+          <FiLoader size={40} className='loading-icon' />
         </div>
       ) : errors ? (
         <p>{errors}</p>
