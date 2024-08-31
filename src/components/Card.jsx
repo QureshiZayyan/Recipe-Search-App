@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import './Card.css'
 import { FiLoader } from "react-icons/fi";
+import { ThemeContext } from "../js/context";
 
-const Card = ({ query }) => {
+const Card = () => {
 
   const [recipe, setRecipe] = useState([]);
   const [errors, setErrors] = useState('');
   const [loading, setLoading] = useState(false);
+  const { query } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {
