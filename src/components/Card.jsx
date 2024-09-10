@@ -7,6 +7,7 @@ const Card = ({ query }) => {
   const [recipe, setRecipe] = useState([]);
   const [errors, setErrors] = useState('');
   const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(10);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +44,7 @@ const Card = ({ query }) => {
       ) :
         recipe && recipe.length > 0
           ? (
-            recipe.map((recipes) => (
+            recipe.slice(0, visible).map((recipes) => (
               <div className="card" key={recipes.idMeal}>
                 <div className="card-img">
                   <img src={recipes.strMealThumb} alt={recipes.strMeal} />
@@ -57,7 +58,9 @@ const Card = ({ query }) => {
                 </div >
               </div >
             ))
-          ) : (
+          )
+          :
+          (
             <div className='error'>
               <h2>No result for the search</h2>
             </div>
