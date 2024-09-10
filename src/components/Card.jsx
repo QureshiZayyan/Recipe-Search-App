@@ -7,9 +7,8 @@ const Card = () => {
 
   const [recipe, setRecipe] = useState([]);
   const [errors, setErrors] = useState('');
-  const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(10);
-  const { query } = useContext(ThemeContext);
+  const { query, setLoading, loading } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {

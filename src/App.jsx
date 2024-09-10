@@ -4,11 +4,11 @@ import Card from './components/Card';
 import './App.css';
 import './components/Media.css';
 import { ThemeProvider, ThemeContext } from './js/context';
+import Pagination from './components/Pagination';
 
 function App() {
   return (
     <>
-      {/* Ensure the context provider wraps the entire app */}
       <ThemeProvider>
         <MainContent />
       </ThemeProvider>
@@ -17,7 +17,7 @@ function App() {
 }
 
 function MainContent() {
-  const { query } = useContext(ThemeContext); // Now inside the provider
+  const { query, loading } = useContext(ThemeContext);
   return (
     <>
       <Navbar />
@@ -25,6 +25,7 @@ function MainContent() {
       <div className="cards-container">
         <Card />
       </div >
+      {loading ? null : <Pagination />}
     </>
   );
 }
