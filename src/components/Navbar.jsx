@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './Navbar.css';
 import { FaSearch } from "react-icons/fa";
+import { ThemeContext } from '../js/context';
 
-const Navbar = ({ setQuery }) => {
+const Navbar = () => {
   const [input, setInput] = useState('');
+  const { setQuery } = useContext(ThemeContext);
 
   const submit = (e) => {
     e.preventDefault();
