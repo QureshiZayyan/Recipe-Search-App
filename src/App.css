@@ -10,8 +10,14 @@ body {
 }
 
 body {
-  /* background-color: rgb(241, 236, 236); */
-  background-color: black;
+  background-color: rgb(241, 236, 236);
+  /* background-color: black; */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-heading {

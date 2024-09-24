@@ -4,10 +4,8 @@ import { FiLoader } from "react-icons/fi";
 import { ThemeContext } from "../js/context";
 
 const Card = () => {
-  const [recipe, setRecipe] = useState([]);
   const [errors, setErrors] = useState('');
-  const { query, setLoading, loading } = useContext(ThemeContext);
-  const [currentPage, setCurrentPage] = useState(1);
+  const { query, setLoading, loading, currentPage, setRecipe, recipe } = useContext(ThemeContext);
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -17,12 +15,11 @@ const Card = () => {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
         if (!response.ok) throw new Error('Server problem');
         const data = await response.json();
-        setRecipe(data.meals || []); // Set an empty array if there are no meals
-        console.log(data);
+        setRecipe(data.meals);
         setErrors('');
       } catch (error) {
         console.error(error);
-        setErrors('Some error occurred');
+        setErrors('no recipes found');
       } finally {
         setLoading(false);
       }
@@ -38,26 +35,14 @@ const Card = () => {
     return tags.split(',').slice(0, 2).join(', ');
   };
 
-  const totalPages = Math.ceil(recipe.length / itemsPerPage); // Calculate total pages
-
-  const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
-
-  const handlePrevious = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
-
   return (
     <>
       {loading ? (
         <div className='loader'>
           <FiLoader size={40} className='loading-icon' />
         </div>
-      ) : errors ? (
-        <p>{errors}</p>
-      ) : (
-        recipe && recipe.length > 0 ? (
+      ) :
+        (
           <>
             {currentItems.map((recipes) => (
               <div className="card" key={recipes.idMeal}>
@@ -77,23 +62,11 @@ const Card = () => {
                 </div>
               </div>
             ))}
-
-            <nav aria-label="Page navigation example">
-              <ul className="pagination">
-                <li className="page-item"><a className="page-link" href="#">Previous</a></li>
-                <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>1</a></li>
-                <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>2</a></li>
-                <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>3</a></li>
-                <li className="page-item"><a className="page-link" href="#">Next</a></li>
-              </ul>
-            </nav>
           </>
-        ) : (
-          <p>No recipes available.</p> // Optional: Display a message if no recipes
         )
-      )}
+      }
     </>
-  );
+  )
 }
 
 export default Card;

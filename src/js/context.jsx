@@ -7,9 +7,11 @@ const ThemeContext = createContext();
 function ThemeProvider({ children }) {
     const [query, setQuery] = useState('chicken');
     const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [recipe, setRecipe] = useState([]);
 
     return (
-        <ThemeContext.Provider value={{ query, setQuery, loading, setLoading }}>
+        <ThemeContext.Provider value={{ query, setQuery, loading, setLoading, currentPage, setCurrentPage, recipe, setRecipe }}>
             {children}
         </ThemeContext.Provider>
     );

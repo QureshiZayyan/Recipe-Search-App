@@ -4,6 +4,7 @@ import Card from './components/Card';
 import './App.css';
 import './components/Media.css';
 import { ThemeProvider, ThemeContext } from './js/context';
+import Pagination from './components/Pagination';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function MainContent() {
       <div className="cards-container">
         <Card />
       </div >
-      {/* {loading ? null : <Pagination />} */}
+      <Pagination />
     </>
   );
 }
