@@ -16,19 +16,20 @@ const Pagination = () => {
   };
 
   return (
-    recipe.length > 0 ? (
+    <>
+      recipe? (
       <nav aria-label="Page navigation example" onClick={(e) => e.preventDefault()}>
         <ul className="pagination">
           <li className="page-item"><a className="page-link" href="#" onClick={() => handlePrevious()}>Previous</a></li>
-          <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === 1}>1</a></li>
-          <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>2</a></li>
-          <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>3</a></li>
-          <li className="page-item"><a className="page-link" href="#" onClick={() => setCurrentPage(currentPage + 1)}>4</a></li>
-          <li className="page-item"><a className="page-link" href="#" onClick={() => handleNext()}>Next</a></li>
-        </ul>
-      </nav>
-    )
-      : null
+          <li className="page-item"><a className="page-link" href="#" onClick={() => currentPage !== 2 ? setCurrentPage(currentPage + 1) : null}>1</a></li>
+          <li className="page-item"><a className="page-link" href="#" onClick={() => currentPage !== 3 ? setCurrentPage(currentPage + 1) : null}>2</a></li>
+          <li className="page-item"><a className="page-link" href="#" onClick={() => currentPage !== 4 ? setCurrentPage(currentPage + 1) : null}>3</a></li>
+          <li className="page-item"><a className="page-link" href="#" onClick={() => currentPage !== 5 ? setCurrentPage(currentPage + 1) : null}>4</a></li>
+          <li className="page-item"><a className="page-link" href="#" onClick={() => handleNext()} disabled={currentPage === totalPages}>Next</a></li>
+        </ul >
+      </nav >
+      )
+    </>
   )
 }
 

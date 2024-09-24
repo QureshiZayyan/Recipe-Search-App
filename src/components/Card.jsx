@@ -15,7 +15,7 @@ const Card = () => {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
         if (!response.ok) throw new Error('Server problem');
         const data = await response.json();
-        setRecipe(data.meals || []);  // Handle case when meals are null
+        setRecipe(data.meals);
         setErrors('');
       } catch (error) {
         console.error(error);
