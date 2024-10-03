@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-button {
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+/* Styling for the Previous and Next buttons */
+.page-button.prev,
+.page-button.next {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

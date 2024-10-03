@@ -29,7 +29,7 @@ const Card = () => {
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = recipe.slice(indexOfFirstItem, indexOfLastItem);  // Avoiding null values
+  const currentItems = recipe.slice(indexOfFirstItem, indexOfLastItem);
 
   const formatTags = (tags) => {
     return tags.split(',').slice(0, 2).join(', ');

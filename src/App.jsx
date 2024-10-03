@@ -17,11 +17,11 @@ function App() {
 }
 
 function MainContent() {
-  const { query } = useContext(ThemeContext);
+  // const { query } = useContext(ThemeContext);
   return (
     <>
       <Navbar />
-      {query && <h2 className='search-heading'>Showing results for {query}</h2>}
+      {/* {query && <h2 className='search-heading'>Showing results for {query}</h2>} */}
       <div className="cards-container">
         <Card />
       </div >
