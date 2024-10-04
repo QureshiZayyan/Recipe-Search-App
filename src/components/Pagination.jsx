@@ -16,11 +16,12 @@ const Pagination = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
+
   return (
     <>
       {recipe.length > 0 ?
 
-        <div className="pagination">
+        <div className="pagination" onClick={(e) => e.preventDefault()}>
           <a href="#" className="page-button prev" onClick={() => handlePrevious()}>Previous</a>
           <a href="#" className="page-button" onClick={() => setCurrentPage(currentPage + 1)}>1</a>
           <a href="#" className="page-button" onClick={() => setCurrentPage(currentPage + 1)}>2</a>
