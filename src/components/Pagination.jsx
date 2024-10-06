@@ -6,7 +6,7 @@ import './Pagination.css';
 const Pagination = () => {
   const { setCurrentPage, currentPage, recipe } = useContext(ThemeContext);
 
-  const totalPages = Math.ceil(recipe.length / 5);
+  const totalPages = recipe != null ? Math.ceil(recipe.length / 5) : null;
 
   const handleNext = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
@@ -19,7 +19,7 @@ const Pagination = () => {
 
   return (
     <>
-      {recipe.length > 0 ?
+      {recipe != null ?
 
         <div className="pagination" onClick={(e) => e.preventDefault()}>
           <a href="#" className="page-button prev" onClick={() => handlePrevious()}>Previous</a>

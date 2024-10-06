@@ -14,12 +14,6 @@ body {
   /* background-color: black; */
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .search-heading {
   color: black;
   text-align: center;

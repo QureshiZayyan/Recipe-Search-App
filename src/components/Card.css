@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  margin: 70px 10.2vw 40px 7.5vw;
+  margin: 70px 8.5vw 40px 8.5vw;
   row-gap: 30px;
 }
 
