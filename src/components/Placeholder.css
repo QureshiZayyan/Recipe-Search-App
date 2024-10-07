@@ -1,11 +1,8 @@
-/* CardPlaceholder.css */
 .card-placeholder {
-  width: 300px;
-  /* Adjust as needed */
+  width: 18.5vw;
   padding: 16px;
   border-radius: 8px;
   background-color: #f0f0f0;
-  /* Light grey background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
 }
@@ -13,9 +10,7 @@
 .placeholder-image {
   width: 100%;
   height: 150px;
-  /* Adjust height as needed */
   background-color: #e0e0e0;
-  /* Darker grey for image placeholder */
   border-radius: 4px;
   margin-bottom: 12px;
 }
@@ -23,9 +18,7 @@
 .placeholder-title {
   width: 80%;
   height: 20px;
-  /* Height of title placeholder */
   background-color: #d0d0d0;
-  /* Slightly darker grey */
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -33,8 +26,6 @@
 .placeholder-description {
   width: 100%;
   height: 15px;
-  /* Height of description placeholder */
   background-color: #d0d0d0;
-  /* Slightly darker grey */
   border-radius: 4px;
 }

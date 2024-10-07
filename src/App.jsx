@@ -17,7 +17,7 @@ function App() {
 }
 
 function MainContent() {
-  // const { query } = useContext(ThemeContext);
+  const { pagination } = useContext(ThemeContext);
   return (
     <>
       <Navbar />
@@ -25,7 +25,7 @@ function MainContent() {
       <div className="cards-container">
         <Card />
       </div >
-      <Pagination />
+      {pagination ? <Pagination /> : null}
     </>
   );
 }

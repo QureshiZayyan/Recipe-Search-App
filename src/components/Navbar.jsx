@@ -12,8 +12,6 @@ const Navbar = () => {
     if (!input) return;
     setQuery(input);
     setInput('');
-    // setRecipe([]);
-    // setHeading(input);
   }
   return (
     <header>

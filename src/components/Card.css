@@ -58,3 +58,7 @@
   display: inline-block;
   color: black;
 }
+
+.text-center {
+  text-align: center;
+}

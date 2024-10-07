@@ -9,9 +9,10 @@ function ThemeProvider({ children }) {
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [recipe, setRecipe] = useState([]);
+    const [pagination, setPagination] = useState(false);
 
     return (
-        <ThemeContext.Provider value={{ query, setQuery, loading, setLoading, currentPage, setCurrentPage, recipe, setRecipe }}>
+        <ThemeContext.Provider value={{ query, setQuery, loading, setLoading, currentPage, setCurrentPage, recipe, setRecipe, pagination, setPagination }}>
             {children}
         </ThemeContext.Provider>
     );

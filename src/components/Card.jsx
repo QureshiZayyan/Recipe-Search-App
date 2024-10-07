@@ -1,34 +1,31 @@
 import { useState, useEffect, useContext } from "react";
 import './Card.css';
-import { FiLoader } from "react-icons/fi";
 import { ThemeContext } from "../js/context";
 import Placeholder from "./Placeholder";
 
 const Card = () => {
   const [errors, setErrors] = useState(false);
-  const { query, setLoading, loading, currentPage, setRecipe, recipe } = useContext(ThemeContext);
+  const { query, setLoading, loading, currentPage, setRecipe, recipe, setPagination } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {
+      setPagination(false)
       setLoading(true);
       try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
         if (!response.ok) throw new Error('Server problem');
         const data = await response.json();
-        // if (data.meals) {
-        setRecipe(data.meals);
-        console.log(data);
-
-        setErrors(false);
-        console.log(data);
-        // }
-        // else {
-        //   setErrors('no recipes found');
-        //   setRecipe([])
-        // }
+        if (data.meals) {
+          setRecipe(data.meals);
+          setErrors(false);
+          setPagination(true);
+        }
+        else {
+          setErrors(`sorry couldn't find any recipe`);
+          setRecipe([]);
+        }
       } catch (error) {
         console.error(error);
-        setRecipe([]);
       } finally {
         setLoading(false);
       }
@@ -50,10 +47,10 @@ const Card = () => {
   return (
     <>
       {loading ? (
-        <div className="loader">
-          <FiLoader size={40} className="loading-icon" />
-        </div>
-      ) : recipe != null ? (
+        Array.from({ length: 5 }).map((_, index) => (
+          <Placeholder key={index} />
+        ))
+      ) : recipe.length > 0 ? (
         currentItems.map((recipes) => (
           <div className="card" key={recipes.idMeal}>
             <div className="card-img">
@@ -74,7 +71,9 @@ const Card = () => {
         ))
       )
         :
-        (<p>error occured</p>)
+        errors ? <p>{errors}</p>
+          :
+          null
       }
     </>
   );
